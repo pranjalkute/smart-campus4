@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<div class="card">
+<h2>Login</h2>
+<form method="post">
+<input name="email" type="email" placeholder="Email" required>
+<input name="password" type="password" placeholder="Password" required>
+<select name="role">
+<option value="student">Student</option>
+<option value="admin">Admin</option>
+</select>
+<button>Login</button>
+</form>
+<p style="color:red;">{{error}}</p>
+</div>
+</body>
+</html>

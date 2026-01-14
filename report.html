@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/smart-campus/static/style.css">
+</head>
+<body>
+<div class="card">
+<h2>Report Issue</h2>
+<form method="post" enctype="multipart/form-data">
+<input name="issue" placeholder="Issue Title" required>
+<textarea name="description" placeholder="Description" required></textarea>
+
+<input type="file" name="photo" accept="image/*" capture="environment"
+onchange="preview(event)">
+<img id="img" style="display:none;width:100%;border-radius:10px;">
+
+<button>Submit</button>
+</form>
+<a href="/dashboard">Dashboard</a> | <a href="/logout">Logout</a>
+</div>
+
+<script>
+function preview(e){
+ let img=document.getElementById("img");
+ img.src=URL.createObjectURL(e.target.files[0]);
+ img.style.display="block";
+}
+</script>
+</body>
+</html>

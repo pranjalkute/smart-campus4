@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="card wide">
+<table>
+<tr><th>ID</th><th>Issue</th><th>Category</th><th>Confidence</th><th>Status</th><th>Action</th></tr>
+{% for c in complaints %}
+<tr>
+<td>{{c[0]}}</td>
+<td>{{c[1]}}</td>
+<td>{{c[3]}}</td>
+<td>{{c[4]}}%</td>
+<td>{{c[6]}}</td>
+<td><a href="/update/{{c[0]}}">Solve</a></td>
+</tr>
+{% endfor %}
+</table>
+</div>
+</body>
+</html>
